@@ -1,0 +1,27 @@
+{
+  "display": {
+    "fullscreen": true,
+    "target_display": 0,
+    "multi_display_mode": [0],
+    "scale": 1.0
+  },
+  "graphics": {
+    "fps_limit": 60,
+    "vsync": true,
+    "background_color": {
+      "r": 0.1,
+      "g": 0.1,
+      "b": 0.1,
+      "a": 1.0
+    }
+  },
+  "animation": {
+    "speed": 1.0,
+    "style": "spinner"
+  },
+  "update": {
+    "auto_update": true,
+    "url": "https://api.github.com/repos/mostafac21y-blip/Loader-5095/releases/latest"
+  },
+  "version": "1.0.0"
+}

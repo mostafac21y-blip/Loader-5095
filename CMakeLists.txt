@@ -29,6 +29,7 @@ set(SOURCES
     src/config_manager.cpp
     src/update_manager.cpp
     src/menu.cpp
+    src/effect_renderer.cpp
 )
 
 set(HEADERS
@@ -38,6 +39,7 @@ set(HEADERS
     include/config_manager.h
     include/update_manager.h
     include/menu.h
+    include/effect_renderer.h
 )
 
 # Create executable

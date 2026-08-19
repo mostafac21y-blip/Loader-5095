@@ -6,25 +6,30 @@
 
 using json = nlohmann::json;
 
+struct ColorRGB {
+    float r, g, b, a;
+};
+
 struct LoaderConfig {
     // Display settings
     bool fullscreen;
     int target_display;
-    std::vector<int> multi_display_mode; // indices of displays to use
+    std::vector<int> multi_display_mode;
+    float scale;
     
     // Graphics settings
     int fps_limit;
     bool vsync;
-    float scale;
+    ColorRGB background_color;
     
-    // Colors
-    struct {
-        float r, g, b, a;
-    } background_color;
-    
-    // Animation
+    // Animation settings
     float animation_speed;
-    std::string loader_style; // "spinner", "progress", "pulse", "wave"
+    std::string loader_style;
+    
+    // Effects settings
+    bool effects_enabled;
+    std::string effect_type;
+    ColorRGB effect_color;
     
     // Update settings
     bool auto_update;
@@ -56,10 +61,8 @@ public:
 private:
     LoaderConfig config;
     
-    // Set default values
+    // Helper methods
     void set_defaults();
-    
-    // Convert to/from JSON
     json to_json() const;
     void from_json(const json& j);
 };
